@@ -20,7 +20,7 @@ jobs:
         run: npx --yes @react-native-community/cli@latest init PrayerAlarm --version 0.76.5 --skip-git-init --pm npm
       - name: Install libraries
         working-directory: PrayerAlarm
-        run: npm i adhan @notifee/react-native react-native-sound react-native-document-picker @react-native-async-storage/async-storage @react-native-community/geolocation react-native-background-fetch
+        run: npm i adhan @notifee/react-native react-native-sound react-native-document-picker @react-native-async-storage/async-storage@1.23.1 @react-native-community/geolocation react-native-background-fetch
       - name: Copy and patch sources
         run: python3 srcfiles/patch.py
       - name: Build APK
